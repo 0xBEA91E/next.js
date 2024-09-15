@@ -19,8 +19,7 @@ jobs:
     if: >-
       ${{ 
         github.event.workflow_run.conclusion == 'failure' &&
-        github.repository == '0xBEA91E/next.js' &&
-        github.event.workflow_run.run_attempt < 2
+        github.repository == '0xBEA91E/next.js'
       }}
     runs-on: ubuntu-latest
     steps:
