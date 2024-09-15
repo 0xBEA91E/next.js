@@ -1,21 +1,10 @@
 name: test-e2e-deploy-release
 
 on:
-  # run on every release/prerelease
-  release:
-    types: [published]
-  # allow triggering manually as well
-  workflow_dispatch:
-
-env:
-  VERCEL_TEST_TEAM: vtest314-next-e2e-tests
-  VERCEL_TEST_TOKEN: ${{ secrets.VERCEL_TEST_TOKEN }}
-  DATADOG_API_KEY: ${{ secrets.DATA_DOG_API_KEY }}
-  DD_ENV: 'ci'
+  pull_request:
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - run: exit 1
-      
