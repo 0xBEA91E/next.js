@@ -8,5 +8,6 @@ on:
 
 jobs:
   test:
+    runs-on: ubuntu-latest
     steps:
       - run: exit 1 
